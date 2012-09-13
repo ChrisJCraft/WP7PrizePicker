@@ -36,7 +36,7 @@
             <StackPanel Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Start"/>
-                    <TextBox Name="textBoxStart" Width="190" Text="0" InputScope="Number" />
+                    <TextBox Name="textBoxStart" Width="190" Text="1" InputScope="Number" />
                 </StackPanel>
                 <TextBlock Text="Hopefuls"/>
                 <ListBox Name="listBoxHopefuls" />
