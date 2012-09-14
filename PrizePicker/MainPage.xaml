@@ -35,7 +35,7 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Start"/>
+                    <TextBlock Text="Start" Margin="0,20,0,0"/>
                     <TextBox Name="textBoxStart" Width="190" Text="1" InputScope="Number" />
                 </StackPanel>
                 <TextBlock Text="Hopefuls"/>
@@ -43,7 +43,7 @@
             </StackPanel>
             <StackPanel Grid.Column="2">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Stop"/>
+                    <TextBlock Text="Stop" Margin="0,20,0,0"/>
                     <TextBox Name="textBoxStop" Width="190" Text="20" InputScope="Number" />
                 </StackPanel>
                 <TextBlock Text="Winners"/>
