@@ -14,6 +14,7 @@ namespace PrizePicker
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
+            this.Focus(); //Added to dismiss the SIP (Soft Input Panel) it is already visible
             if (listBoxWinners.Items.Count > 0)
             {
                 var result = MessageBox.Show("Are you sure? This action will clear the Winners list.", "Alert", MessageBoxButton.OKCancel);
@@ -45,6 +46,7 @@ namespace PrizePicker
 
         private void DrawButton_Click(object sender, EventArgs e)
         {
+            this.Focus(); //Added to dismiss the SIP (Soft Input Panel) it is already visible
             if (listBoxHopefuls.Items.Count == 0)
             {
                 MessageBox.Show("Everybody has won something, go home.", "Alert", MessageBoxButton.OKCancel);
