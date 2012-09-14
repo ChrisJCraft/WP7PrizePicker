@@ -10,11 +10,19 @@ namespace PrizePicker
         public MainPage()
         {
             InitializeComponent();
+            Loaded += new RoutedEventHandler(MainPage_Loaded);
+        }
+        
+        void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            //disable DrawButton button initially 
+            ((ApplicationBarIconButton)ApplicationBar.Buttons[1]).IsEnabled = false;
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
             this.Focus(); //Added to dismiss the SIP (Soft Input Panel) it is already visible
+            ((ApplicationBarIconButton)ApplicationBar.Buttons[1]).IsEnabled = true; //enable the DrawButton button
             if (listBoxWinners.Items.Count > 0)
             {
                 var result = MessageBox.Show("Are you sure? This action will clear the Winners list.", "Alert", MessageBoxButton.OKCancel);
