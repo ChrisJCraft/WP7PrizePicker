@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Windows;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
 
 namespace PrizePicker
 {
@@ -10,7 +11,7 @@ namespace PrizePicker
         public MainPage()
         {
             InitializeComponent();
-            Loaded += new RoutedEventHandler(MainPage_Loaded);
+            Loaded += MainPage_Loaded;
         }
         
         void MainPage_Loaded(object sender, RoutedEventArgs e)
@@ -21,7 +22,7 @@ namespace PrizePicker
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
-            this.Focus(); //Added to dismiss the SIP (Soft Input Panel) it is already visible
+            Focus(); //Added to dismiss the SIP (Soft Input Panel) it is already visible
             ((ApplicationBarIconButton)ApplicationBar.Buttons[1]).IsEnabled = true; //enable the DrawButton button
             if (listBoxWinners.Items.Count > 0)
             {
@@ -54,7 +55,7 @@ namespace PrizePicker
 
         private void DrawButton_Click(object sender, EventArgs e)
         {
-            this.Focus(); //Added to dismiss the SIP (Soft Input Panel) it is already visible
+            Focus(); //Added to dismiss the SIP (Soft Input Panel) it is already visible
             if (listBoxHopefuls.Items.Count == 0)
             {
                 MessageBox.Show("Everybody has won something, go home.", "Alert", MessageBoxButton.OKCancel);
